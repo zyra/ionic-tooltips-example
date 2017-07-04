@@ -1,14 +1,50 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Tooltips Demo
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tooltip="Call" [tooltipNav]="true" [tooltipEvent]="tooltipEvent">
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+
+  <ion-item>
+    <ion-label>Show arrow</ion-label>
+    <ion-toggle mode="ios" [(ngModel)]="showArrow"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    Show tooltip on
+    <p padding-top>
+      <ion-segment mode="ios" [(ngModel)]="tooltipEvent">
+        <ion-segment-button value="click">Click</ion-segment-button>
+        <ion-segment-button value="press">Press</ion-segment-button>
+      </ion-segment>
+    </p>
+  </ion-item>
+
+  <br>
+
+  <button margin-top ion-button mode="ios" block tooltip="I'm a beautiful tooltip" tooltipPositionV="top" [arrow]="showArrow" [tooltipEvent]="tooltipEvent">
+    Top tooltip
+  </button>
+
+  <p text-right>
+    <button ion-button mode="ios" tooltip="I'm a beautiful tooltip" tooltipPositionH="left" [arrow]="showArrow" [tooltipEvent]="tooltipEvent">
+      Left tooltip
+    </button>
   </p>
+
+  <button ion-button mode="ios" tooltip="I'm a beautiful tooltip" tooltipPositionH="right" [arrow]="showArrow" [tooltipEvent]="tooltipEvent">
+    Right tooltip
+  </button>
+
+  <button ion-button mode="ios" block tooltip="I'm a beautiful tooltip" tooltipPositionV="bottom" [arrow]="showArrow" [tooltipEvent]="tooltipEvent">
+    Bottom tooltip
+  </button>
+
 </ion-content>
