@@ -1,8 +1,8 @@
 {
   "name": "ionic-tooltips-example",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Zyra Media Inc <info@zyra.ca>",
+  "homepage": "https://zyramedia.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
