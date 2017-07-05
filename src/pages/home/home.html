@@ -11,7 +11,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
   <ion-item>
     <ion-label>Show arrow</ion-label>
@@ -26,29 +26,34 @@
       </ion-segment>
     </p>
   </ion-item>
+  <ion-item-divider color="light">
+    Duration
+    <ion-note color="primary" item-right>
+      {{ duration + 'ms' }}
+    </ion-note>
+  </ion-item-divider>
   <ion-item>
-    <ion-label>Duration</ion-label>
-    <ion-range [(ngModel)]="duration" min="1000" max="10000" step="1000"></ion-range>
+    <ion-range [(ngModel)]="duration" [min]="1000" [max]="10000" [step]="1000" [pin]="true" [snaps]="true"></ion-range>
   </ion-item>
 
-  <br>
-
-  <button margin-top ion-button mode="ios" block tooltip="I'm a beautiful tooltip" positionV="top" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
-    Top tooltip
-  </button>
-
-  <p text-right>
-    <button ion-button mode="ios" tooltip="I'm a beautiful tooltip" positionH="left" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
-      Left tooltip
+  <div padding>
+    <button margin-top ion-button mode="ios" block tooltip="I'm a beautiful tooltip" positionV="top" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
+      Top tooltip
     </button>
-  </p>
 
-  <button ion-button mode="ios" tooltip="I'm a beautiful tooltip" positionH="right" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
-    Right tooltip
-  </button>
+    <p text-right>
+      <button ion-button mode="ios" tooltip="I'm a beautiful tooltip" positionH="left" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
+        Left tooltip
+      </button>
+    </p>
 
-  <button ion-button mode="ios" block tooltip="I'm a beautiful tooltip" positionV="bottom" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
-    Bottom tooltip
-  </button>
+    <button ion-button mode="ios" tooltip="I'm a beautiful tooltip" positionH="right" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
+      Right tooltip
+    </button>
+
+    <button ion-button mode="ios" block tooltip="I'm a beautiful tooltip" positionV="bottom" [arrow]="showArrow" [event]="tooltipEvent" [duration]="duration">
+      Bottom tooltip
+    </button>
+  </div>
 
 </ion-content>
