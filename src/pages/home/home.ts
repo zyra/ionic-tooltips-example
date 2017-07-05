@@ -8,5 +8,6 @@ export class HomePage {
 
   tooltipEvent: 'click' | 'press' = 'click';
   showArrow: boolean = true;
+  duration: number = 3000;
 
 }
