@@ -1,6 +1,8 @@
 # Ionic Tooltips Example
 Example app demonstrating the `ionic-tooltips` module. To view the module's repo, please go to the following link: https://github.com/zyra/ionic-tooltips
 
+![Ionic Tooltips Demo](https://github.com/zyra/ionic-tooltips-example/blob/master/ionic-tooltips.gif?raw=true)
+
 # Instructions
 To test this app, run the following commands:
 ```shell
