@@ -1,4 +1,4 @@
-import { TooltipsChildModule } from './../../ionic-tooltips/src/tooltips.child.module';
+import { TooltipsModule } from './../../ionic-tooltips/src';
 import { CommonModule } from '@angular/common';
 import { HomePage } from './home';
 import { NgModule } from '@angular/core';
@@ -11,7 +11,7 @@ import { IonicPageModule } from 'ionic-angular';
   imports: [
     CommonModule,
     IonicPageModule.forChild(HomePage),
-    TooltipsChildModule
+    TooltipsModule
   ],
   exports: [
     HomePage
